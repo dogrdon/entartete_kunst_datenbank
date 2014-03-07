@@ -83,7 +83,8 @@ def _scrape_it_look_for_next(dom_elem, selector, iterator, data_repo, br_obj, ne
         
         details_page = lxml.html.fromstring(br_obj.response().read())
 
-        '''===============Gather all of the details for putting in the db================'''    
+        '''===============Gather all of the details for putting in the db================'''
+        #Would probably want to just create a function for these
         if details_page.cssselect('div.listDescription ul li.titel span.tspValue'):
             for b in details_page.cssselect('div.listDescription ul li.titel span.tspValue'):
             
